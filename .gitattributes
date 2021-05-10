@@ -1,0 +1,4 @@
+Fantasy filter=lfs diff=lfs merge=lfs -text
+*.zip filter=lfs diff=lfs merge=lfs -text
+*.resS filter=lfs diff=lfs merge=lfs -text
+Fantasy/Library/Artifacts/92/92c9d8250501403f1e5a02c4b9dcef89 filter=lfs diff=lfs merge=lfs -text
