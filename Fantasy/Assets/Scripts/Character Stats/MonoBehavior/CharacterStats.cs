@@ -3,12 +3,15 @@ using System;
 
 public class CharacterStats : MonoBehaviour
 {
-    public event Action<int, int> UpdataHealthBarOnAttack;
+    public event Action<int, int> UpdataHealthBarOnAttack;//
     public CharacterData_SO templateData;
     public CharacterData_SO characterData;
     public AttackData_SO attackData;
     public AttackData_SO templateAttack;
     private bool init;
+
+    [Header("Weapon")]
+    public Transform weaponSlot;
 
     [HideInInspector]
     public bool isCritical;
@@ -27,6 +30,7 @@ public class CharacterStats : MonoBehaviour
     {
         if(PlayerController.Instance!=null)
         {
+            //怪物等级与玩家同步
             if (!init && gameObject.CompareTag("Enemy"))
             {
                 Level();
@@ -117,5 +121,19 @@ public class CharacterStats : MonoBehaviour
         attackData.minDamage += characterData.currentlevel-1;
         attackData.maxDamage += characterData.currentlevel-1;
     }
-    
+
+    #region Equip Weapon
+    //装备武器
+    public void EquipWeapon(ItemData_SO weapon)
+    {
+        if(weapon.weaponPrefab!=null)
+        {
+            Instantiate(weapon.weaponPrefab, weaponSlot);
+
+            //装备武器更新属性
+            attackData.ApplyWeaponData(weapon.weaponData);
+        }
+    }
+    #endregion
+
 }

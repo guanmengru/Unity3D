@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerGetHit : StateMachineBehaviour
 {
+    //玩家受到暴击，进入受击状态
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         PlayerController.Instance.isHit = true;

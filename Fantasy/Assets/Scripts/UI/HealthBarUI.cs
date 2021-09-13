@@ -51,6 +51,7 @@ public class HealthBarUI : MonoBehaviour
             }
         }
     }
+    //怪血条刷新
     private void UpdateHealthBar(int currentHealth, int maxHealth)
     {
         if (UIbar == null)

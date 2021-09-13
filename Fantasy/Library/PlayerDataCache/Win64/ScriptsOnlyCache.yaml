@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - AttackData_SO
+    - BagController
     - Bat
     - CameraController
     - CharacterData_SO
@@ -17,6 +18,10 @@ ScriptsOnlyBuild:
     - Grunt
     - HealthBarUI
     - Help
+    - InventoryData_SO
+    - InventoryManager
+    - ItemData_SO
+    - ItemPickUp
     - LoadManager
     - MainMenu
     - MusicController
@@ -39,12 +44,6 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineVirtualCamera
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
-    UnityEditor.Graphs.dll:
-    - UnityEditor.Graphs.AnimationBlendTree.Graph
-    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.Graph
-    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -55,6 +54,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
@@ -145,41 +145,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2548}
+      Script: {instanceID: 2496}
     - Class: 114
-      Script: {instanceID: 2610}
+      Script: {instanceID: 2550}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2600}
     - Class: 114
-      Script: {instanceID: 2630}
+      Script: {instanceID: 2614}
     - Class: 114
-      Script: {instanceID: 2786}
+      Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2634}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2856}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 3014}
+      Script: {instanceID: 2824}
     - Class: 114
-      Script: {instanceID: 3036}
+      Script: {instanceID: 2854}
+    - Class: 114
+      Script: {instanceID: 2862}
+    - Class: 114
+      Script: {instanceID: 2898}
+    - Class: 114
+      Script: {instanceID: 3020}
     - Class: 114
       Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3442}
+      Script: {instanceID: 3254}
     - Class: 114
-      Script: {instanceID: 3582}
+      Script: {instanceID: 3324}
     - Class: 114
-      Script: {instanceID: 3932}
+      Script: {instanceID: 3450}
+    - Class: 114
+      Script: {instanceID: 3590}
     - Class: 114
       Script: {instanceID: 3940}
     - Class: 114
-      Script: {instanceID: 4342}
+      Script: {instanceID: 3948}
     - Class: 114
-      Script: {instanceID: 4424}
+      Script: {instanceID: 4348}
+    - Class: 114
+      Script: {instanceID: 4394}
+    - Class: 114
+      Script: {instanceID: 4430}
+    - Class: 114
+      Script: {instanceID: 76042}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -312,29 +326,29 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2492}
     - Class: 114
-      Script: {instanceID: 2548}
+      Script: {instanceID: 2550}
     - Class: 114
-      Script: {instanceID: 2758}
+      Script: {instanceID: 2762}
     - Class: 114
-      Script: {instanceID: 2786}
+      Script: {instanceID: 2790}
     - Class: 114
-      Script: {instanceID: 2802}
+      Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2892}
-    - Class: 114
-      Script: {instanceID: 3036}
+      Script: {instanceID: 2898}
     - Class: 114
       Script: {instanceID: 3042}
     - Class: 114
-      Script: {instanceID: 3582}
+      Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3854}
+      Script: {instanceID: 3590}
     - Class: 114
-      Script: {instanceID: 3932}
+      Script: {instanceID: 3862}
     - Class: 114
-      Script: {instanceID: 4342}
+      Script: {instanceID: 3940}
     - Class: 114
-      Script: {instanceID: 4424}
+      Script: {instanceID: 4348}
+    - Class: 114
+      Script: {instanceID: 4430}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -433,13 +447,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2488}
     - Class: 114
-      Script: {instanceID: 2548}
+      Script: {instanceID: 2550}
     - Class: 114
-      Script: {instanceID: 2624}
+      Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 2848}
+      Script: {instanceID: 2854}
     - Class: 114
-      Script: {instanceID: 3248}
+      Script: {instanceID: 3254}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -573,7 +587,7 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
-      Hash: 04ddf56a91c24b77910fd1dd1605772e
+      Hash: 95b1adf646269e7b72fa890f690cdff5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CharacterStats
@@ -759,6 +773,12 @@ ScriptsOnlyBuild:
     className: EventSystem
   - hash:
       serializedVersion: 2
+      Hash: aa76f88da1d6a393150526faa7089dc8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InventoryData_SO
+  - hash:
+      serializedVersion: 2
       Hash: fe64a45214940b510a0ec79c96d43498
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -811,6 +831,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: FAE
     className: FAE_DemoOrbitCamera
+  - hash:
+      serializedVersion: 2
+      Hash: 38e3166b7ace66357e794b448664609a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemPickUp
   - hash:
       serializedVersion: 2
       Hash: cc8ff0dd5a83c606e2d90b4cbccf25de
@@ -907,6 +933,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: a1c524eb3c32638f6b1dfbb14507c914
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InventoryManager
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -1093,6 +1125,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: d5ff4263b9e8f498d541e90339400383
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemData_SO
   - hash:
       serializedVersion: 2
       Hash: 87ff43d2baf3385cba327d8f803a4ebb
@@ -1377,12 +1415,6 @@ ScriptsOnlyBuild:
     className: SignalEmitter
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: FirstMusic
-  - hash:
-      serializedVersion: 2
       Hash: 52ef521495804dec2fa52a9d58524a8f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -1429,6 +1461,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BagController
   platform: 19
   scenePathNames:
   - Assets/Scene/FantasyMain.unity

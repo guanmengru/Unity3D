@@ -24,7 +24,7 @@ public class EnemyController : MonoBehaviour,IEndGameObserver
     public float lookAtTime;//寻找时间
     private float remainLookAtTime;
     private float lastAttackTime;//攻击cd
-    private Quaternion guardRotation;
+    private Quaternion guardRotation;//初始方向
 
     [Header("Patrol State")]
     public float patrolRange;//巡逻范围

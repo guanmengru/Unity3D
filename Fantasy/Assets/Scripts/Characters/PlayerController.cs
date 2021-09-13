@@ -18,7 +18,7 @@ public class PlayerController :Singleton<PlayerController>
     private float turnSmoothTime = 0.1f;
     private float jumpTime;
     private float turnSmoothVelocity;
-    public float sightRadius;
+    public float sightRadius;//攻击范围
     public int enemy;//追击玩家怪数量
     [HideInInspector]
     public bool isHit;//玩家处于受伤动画
@@ -37,7 +37,7 @@ public class PlayerController :Singleton<PlayerController>
     
     protected override void Awake()
     {      
-        Cursor.visible = false;
+        Cursor.visible = false;//隐藏鼠标光标
         base.Awake();
 
         enemy = 0;
@@ -54,7 +54,7 @@ public class PlayerController :Singleton<PlayerController>
     private void OnEnable()
     {
         GameManager.Instance.RigisterPlayer(characterStats);
-        
+
         SaveManager.Instance.LoadPlayerData();
     }
 
@@ -79,19 +79,28 @@ public class PlayerController :Singleton<PlayerController>
             GameManager.Instance.NotifyObservers();
         }
 
+        //测试bug
+        //Bug();
+
         //音乐切换
         if (enemy!=0)
             MusicController.Instance.mymusic = MusicController.musicStats.isFight;//播放战斗音乐
         else
             MusicController.Instance.mymusic = MusicController.musicStats.isIdel; //播放普通音乐
 
-        PlayMove();
-        FightTime();
+
+        if(playerstates!=PlayerStates.nothing)
+        {
+            PlayMove();
+            FightTime();
+        }
+        //PlayMove();
+        //FightTime();
 
         jumpTime -= Time.deltaTime;
         lastAttackTime -= Time.deltaTime;
 
-        if (playerstates!=PlayerStates.isFight&& jumpTime < 0) { playerstates = PlayerStates.isMove; isJump = false; }
+        if (playerstates!=PlayerStates.isFight&& jumpTime < 0&& playerstates != PlayerStates.nothing) { playerstates = PlayerStates.isMove; isJump = false; }
     }
     //移动，跳跃，发呆
     public void PlayMove()
@@ -99,6 +108,8 @@ public class PlayerController :Singleton<PlayerController>
         StopAllCoroutines();
 
         if (isDead) return;
+
+           
 
         //获取键盘wasd
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -161,6 +172,8 @@ public class PlayerController :Singleton<PlayerController>
     //攻击动画
     public void FightTime()
     {
+        if (playerstates == PlayerStates.isJump)
+            return;
         if (Input.GetMouseButtonDown(0) && combonum < 4&&lastAttackTime<0.3&&!isHit)
         {
             characterStats.isCritical = Random.value < characterStats.attackData.criticalChance;
@@ -195,7 +208,8 @@ public class PlayerController :Singleton<PlayerController>
         isAnim,//玩家处于不能动的动画状态
         isFight,//攻击状态
         isMove,//可以移动状态
-        isJump//跳跃状态
+        isJump,//跳跃状态
+        nothing
     }
 
     //画图玩家的攻击范围
@@ -244,4 +258,19 @@ public class PlayerController :Singleton<PlayerController>
         }
 ;
     }
+
+    //一个普通的测试
+    public void Bug()
+    {
+        if (playerstates == PlayerStates.nothing)
+            Debug.Log("nothing");
+        if (Input.GetKeyDown(KeyCode.B) )
+        {
+            //Time.timeScale = 0;
+            Debug.Log("b");
+            playerstates = PlayerStates.nothing;
+
+        }
+    }
+
 }

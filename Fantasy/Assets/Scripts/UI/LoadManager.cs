@@ -37,7 +37,7 @@ public class LoadManager : Singleton<LoadManager>
         while(!SceneController.Instance.operation.isDone)
         {
             slider.value=SceneController.Instance.operation.progress;
-            text.text=SceneController.Instance.operation.progress*100+"%";
+            text.text=slider.value*100+"%";
             text2.text="Waiting";
             if(SceneController.Instance.operation.progress>=0.9f)
             {

@@ -4,12 +4,11 @@ using UnityEngine.AI;
 public class StopAgent : StateMachineBehaviour
 {
 
-
+    //停止移动
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<NavMeshAgent>().isStopped = true;
-        
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

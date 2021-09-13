@@ -16,14 +16,14 @@ public class SceneFader : MonoBehaviour
         canvasGroup=GetComponent<CanvasGroup>();
         DontDestroyOnLoad(this);
     }
-
+/*
     public IEnumerator FadeOutIn()
     {
         yield return FadeOut(fadeOutDuration);
         yield return FadeOut(fadeInDuration);
     }
 
-    
+    */
     public IEnumerator FadeOut(float time)
     {
         while(canvasGroup.alpha<1)
