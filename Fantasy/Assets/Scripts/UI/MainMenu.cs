@@ -8,7 +8,8 @@ public class MainMenu : MonoBehaviour
     Button newGameBtn;
     Button continueBtn;
     Button quitBtn;
-    
+
+
 
     private void Awake()
     {
@@ -27,15 +28,22 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.DeleteAll();
         LoadManager.Instance.LoadNextLevel();
         SceneController.Instance.TransitionToFirstLevel();
-        SceneController.Instance.fadeFinished=true;
+        SceneController.Instance.fadeFinished = true;
+
+        GameManager.Instance.gameType = true;
+
+        
+       
 
     }
     //继续游戏
     void ContinueGame()
     {
+
         LoadManager.Instance.LoadNextLevel();
         SceneController.Instance.TransitionToLoadGame();
         SceneController.Instance.fadeFinished=true;
+        GameManager.Instance.gameType = false;
     }
 
     //退出游戏

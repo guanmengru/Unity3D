@@ -14,6 +14,8 @@ public class ItemPickUp : MonoBehaviour
 
             //将物品添加进背包
             InventoryManager.Instance.InventoryData.AddItem(itemData, itemData.itemAmount);
+
+
             GameManager.Instance.playerStats.EquipWeapon(itemData);
             Destroy(gameObject);
         }

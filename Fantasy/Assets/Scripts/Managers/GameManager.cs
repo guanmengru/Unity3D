@@ -6,8 +6,8 @@ using Cinemachine;
 public class GameManager : Singleton<GameManager>
 {
     public CharacterStats playerStats;
-    private CinemachineVirtualCamera followCamera; 
-
+    private CinemachineVirtualCamera followCamera;
+    public bool gameType;
 
     protected override void Awake()
     {

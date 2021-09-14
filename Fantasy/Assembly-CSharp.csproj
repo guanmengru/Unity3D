@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Managers\SaveManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\Logic\MonoBehavior\InventoryManager.cs" />
     <Compile Include="Assets\Scripts\Controller\MusicController.cs" />
+    <Compile Include="Assets\Scripts\Controller\BagController.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Bat.cs" />
     <Compile Include="Assets\Scripts\Characters\Enemy\Rock.cs" />
     <Compile Include="Assets\Fantasy Adventure Environment\Scripts\PigmentMapGenerator.cs" />
@@ -99,7 +100,9 @@
     <Compile Include="Assets\Scripts\UI\PlayerHealthUI.cs" />
     <Compile Include="Assets\Scripts\Characters\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Transition\SceneController.cs" />
-    <Compile Include="Assets\Scripts\Controller\BagController.cs" />
+    <Compile Include="Assets\Scripts\Inventory\UI\ContainerUI.cs" />
+    <Compile Include="Assets\Scripts\Inventory\UI\SlotHolder.cs" />
+    <Compile Include="Assets\Scripts\Inventory\UI\ItemUI.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Fantasy Adventure Environment\Shaders\VS_InstancedIndirect.cginc" />

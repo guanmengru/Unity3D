@@ -14,7 +14,14 @@ public class BagController : Singleton<BagController>
 
         exitButton.onClick.AddListener(CloseBag);
         openBag = false;
-        
+        if (GameManager.Instance.gameType)
+        {
+            for (int i = 0; i < InventoryManager.Instance.InventoryData.items.Count; i++)
+            {
+                InventoryManager.Instance.InventoryData.items[i] = null;
+            }
+            GameManager.Instance.gameType = false;
+        }
     }
 
     // Update is called once per frame
@@ -30,7 +37,9 @@ public class BagController : Singleton<BagController>
         {
             Time.timeScale = 0;
             Cursor.visible = true;
+            
             InventoryManager.Instance.gameObject.transform.GetChild(0).gameObject.SetActive(true);
+            InventoryManager.Instance.inventoryUI.RefreshUI();
             camera.enabled = false;
             PlayerController.Instance.playerstates = PlayerController.PlayerStates.nothing;
             
