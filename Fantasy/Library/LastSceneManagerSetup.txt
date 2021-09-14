@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scene/Fantasy.unity
+- path: Assets/Scene/FantasyMain.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

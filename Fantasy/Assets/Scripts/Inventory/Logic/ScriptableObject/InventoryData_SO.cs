@@ -24,7 +24,6 @@ public class InventoryData_SO : ScriptableObject
         {
             if (items[i].itemData == null && !found)
             {
-                found = true;
                 items[i].itemData = newItemData;
                 items[i].amount = amount;
                 break;

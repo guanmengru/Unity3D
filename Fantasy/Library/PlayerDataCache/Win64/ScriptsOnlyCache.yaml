@@ -7,6 +7,7 @@ ScriptsOnlyBuild:
     - CameraController
     - CharacterData_SO
     - CharacterStats
+    - ContainerUI
     - Door
     - EnemyController
     - FAE.CliffAppearance
@@ -22,6 +23,7 @@ ScriptsOnlyBuild:
     - InventoryManager
     - ItemData_SO
     - ItemPickUp
+    - ItemUI
     - LoadManager
     - MainMenu
     - MusicController
@@ -33,6 +35,7 @@ ScriptsOnlyBuild:
     - SaveManager
     - SceneController
     - SceneFader
+    - SlotHolder
     - StopAgent
     - TransitionDestination
     - TransitionPoint
@@ -161,39 +164,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2824}
+      Script: {instanceID: 2808}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2826}
     - Class: 114
-      Script: {instanceID: 2862}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 2898}
+      Script: {instanceID: 2860}
     - Class: 114
-      Script: {instanceID: 3020}
+      Script: {instanceID: 2866}
     - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2902}
+    - Class: 114
+      Script: {instanceID: 2910}
+    - Class: 114
+      Script: {instanceID: 3026}
     - Class: 114
       Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 3054}
     - Class: 114
-      Script: {instanceID: 3324}
+      Script: {instanceID: 3260}
     - Class: 114
-      Script: {instanceID: 3450}
+      Script: {instanceID: 3330}
     - Class: 114
-      Script: {instanceID: 3590}
+      Script: {instanceID: 3456}
     - Class: 114
-      Script: {instanceID: 3940}
+      Script: {instanceID: 3460}
+    - Class: 114
+      Script: {instanceID: 3598}
     - Class: 114
       Script: {instanceID: 3948}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 3956}
     - Class: 114
-      Script: {instanceID: 4394}
+      Script: {instanceID: 4356}
     - Class: 114
-      Script: {instanceID: 4430}
+      Script: {instanceID: 4402}
     - Class: 114
-      Script: {instanceID: 76042}
+      Script: {instanceID: 4438}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -334,21 +343,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2806}
     - Class: 114
-      Script: {instanceID: 2898}
-    - Class: 114
-      Script: {instanceID: 3042}
+      Script: {instanceID: 2902}
     - Class: 114
       Script: {instanceID: 3048}
     - Class: 114
-      Script: {instanceID: 3590}
+      Script: {instanceID: 3054}
     - Class: 114
-      Script: {instanceID: 3862}
+      Script: {instanceID: 3598}
     - Class: 114
-      Script: {instanceID: 3940}
+      Script: {instanceID: 3870}
     - Class: 114
-      Script: {instanceID: 4348}
+      Script: {instanceID: 3948}
     - Class: 114
-      Script: {instanceID: 4430}
+      Script: {instanceID: 4356}
+    - Class: 114
+      Script: {instanceID: 4438}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 121
@@ -451,9 +460,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2628}
     - Class: 114
-      Script: {instanceID: 2854}
+      Script: {instanceID: 2856}
     - Class: 114
-      Script: {instanceID: 3254}
+      Script: {instanceID: 3260}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -713,7 +722,7 @@ ScriptsOnlyBuild:
     className: CinemachineBrain
   - hash:
       serializedVersion: 2
-      Hash: 758300499387b27dd2b353e0a8cb4e5f
+      Hash: 4df2f8435872526d81979a38907f16fa
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -923,6 +932,12 @@ ScriptsOnlyBuild:
     className: StandaloneInputModule
   - hash:
       serializedVersion: 2
+      Hash: 6568883a91cfb6a36e83876a392e0656
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ItemUI
+  - hash:
+      serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -935,7 +950,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: a1c524eb3c32638f6b1dfbb14507c914
+      Hash: 76477d158a4b94c258ec2051deca2bc6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: InventoryManager
@@ -963,6 +978,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: ae9fa59464f4ca846bd5f0e9b3cd70aa
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BagController
   - hash:
       serializedVersion: 2
       Hash: cc8ff0dd5a83c606e2d90b4cbccf25de
@@ -993,6 +1014,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: f964fcb2cf9a5917b2b13df5531807a0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SlotHolder
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -1191,6 +1218,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: HealthBarUI
+  - hash:
+      serializedVersion: 2
+      Hash: 4b96271a40fdf19fe8678a49b672fe17
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ContainerUI
   - hash:
       serializedVersion: 2
       Hash: a5781dc71a671b1ad2b38de19f24b71f
@@ -1461,12 +1494,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: SceneController
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: BagController
   platform: 19
   scenePathNames:
   - Assets/Scene/FantasyMain.unity

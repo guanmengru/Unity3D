@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class BagController : Singleton<BagController>
 {
-    bool openBag;
+    public bool openBag;
     public Button exitButton;
-    public new CameraController camera;
+    public  CameraController camera;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,8 +18,9 @@ public class BagController : Singleton<BagController>
         {
             for (int i = 0; i < InventoryManager.Instance.InventoryData.items.Count; i++)
             {
-                InventoryManager.Instance.InventoryData.items[i] = null;
-            }
+                InventoryManager.Instance.InventoryData.items[i].itemData = null;
+                InventoryManager.Instance.InventoryData.items[i].amount = 0;
+        }
             GameManager.Instance.gameType = false;
         }
     }
@@ -47,7 +48,7 @@ public class BagController : Singleton<BagController>
         }
     }
     //¹Ø±Õ±³°ü
-    void CloseBag()
+    public void CloseBag()
     {
         Cursor.visible = true;
         InventoryManager.Instance.gameObject.transform.GetChild(0).gameObject.SetActive(false);

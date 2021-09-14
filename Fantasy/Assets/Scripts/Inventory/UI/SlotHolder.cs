@@ -27,6 +27,10 @@ public class SlotHolder : MonoBehaviour
                 break;
         }
         var item = ItemUI.Bag.items[ItemUI.Index];
+
+
         ItemUI.SetupItemUI(item.itemData, item.amount);
+
+        
     }
 }

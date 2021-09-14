@@ -107,6 +107,13 @@ public class SceneController : Singleton<SceneController>,IEndGameObserver
     //²Ëµ¥Ò³Ãæ
     public void TransitionToMain()
     {
+        if (Time.timeScale != 1)
+            Time.timeScale = 1;
+        if(BagController.Instance.openBag)
+        {
+            BagController.Instance.openBag = false;
+            BagController.Instance.CloseBag();
+        }
         StartCoroutine(LoadMain());
     }
 

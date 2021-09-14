@@ -19,7 +19,7 @@ public class ItemUI : MonoBehaviour
     } = -1;
     public void SetupItemUI(ItemData_SO item,int itemAmount)
     {
-        if(item!=null)
+        if (item!=null)
         {
 
             icon.sprite = item.itemIcon;
@@ -28,6 +28,7 @@ public class ItemUI : MonoBehaviour
         }
         else
         {
+
             icon.gameObject.SetActive(false);
         }
 
