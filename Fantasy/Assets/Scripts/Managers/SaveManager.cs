@@ -30,12 +30,14 @@ public class SaveManager : Singleton<SaveManager>
     {
         Save(GameManager.Instance.playerStats.characterData, GameManager.Instance.playerStats.characterData.name);
         Save(GameManager.Instance.playerStats.attackData, GameManager.Instance.playerStats.attackData.name);
+        Save(InventoryManager.Instance.InventoryData, InventoryManager.Instance.InventoryData.name);
 
     }
     public void LoadPlayerData()
     {
         Load(GameManager.Instance.playerStats.characterData, GameManager.Instance.playerStats.characterData.name);
         Load(GameManager.Instance.playerStats.attackData, GameManager.Instance.playerStats.attackData.name);
+        Load(InventoryManager.Instance.InventoryData, InventoryManager.Instance.InventoryData.name);
     }
 
     //保存数据
