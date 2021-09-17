@@ -1,4 +1,11 @@
-这个仓库清空lfs后出了问题，请前往Unity3d_Current
+！！！！！
+请移步https://gitee.com/guan-mengru/Unity3D/tree/master
+！！！！！
+
+
+
+
+
 # Unity3D
 角色扮演游戏
 场景为unity商城的成品
