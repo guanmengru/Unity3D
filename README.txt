@@ -1,3 +1,4 @@
+这个仓库清空lfs后出了问题，请前往Unity3d_Current
 # Unity3D
 角色扮演游戏
 场景为unity商城的成品
